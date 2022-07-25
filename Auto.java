@@ -1,65 +1,37 @@
+package ejemplopoo;
+
 
 public class Auto {
 
-   
-    private String patente;
-    private String marca;
-    private String modelo;
-    private String color;
-    private String chasis;
+    public static void main(String[] args) {
+       Automotor aut =new Automotor ("Nissan",548996, 5);
+       Vehiculo auto1 = new Vehiculo(1,"rojo","JKA 112","Adrian",true,"Ford", 156846534,5);
+       Vehiculo auto2 = new Vehiculo(2,"negro","JFK 765","Karina",false,"Volkswagen",15454, 2);
+       Camion camion =new Camion( true, 3,"Volvo",11564,6);
+       Moto moto = new Moto(125,"Yamaha",265364,2);
 
-     public Auto(String patente, String marca, String modelo, String color, String chasis) {
-        this.patente = patente;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.color = color;
-        this.chasis = chasis;
-    }
-     
-    public String getPatente() {
-        return patente;
-    }
+Automotor vector[]=new Automotor[5];
+vector[0]= aut;
+vector[1]= auto1;
+vector[2]=auto2;
+vector[3]=camion;
+vector[4]=moto;
+        int i;
 
-    public void setPatente(String patente) {
-        this.patente = patente;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getChasis() {
-        return chasis;
-    }
-
-    public void setChasis(String chasis) {
-        this.chasis = chasis;
-    }
-
-    
-
-   
-
-   
+for(i=0; i<5; i++){
+        System.out.println("los regustros son: " + i + vector[i].getMarca());
 }
- 
+
+
+
+
+
+/*
+ auto2.encender();
+ auto2.acelerar(80);
+ auto2.frenar(20);
+ auto2.apagar();
+
+*/
+ }   
+}
